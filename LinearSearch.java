@@ -1,15 +1,38 @@
-public class LinearSearch{    
-public static int linearSearch(int[] arr, int key){    
-        for(int i=0;i<arr.length;i++){    
-            if(arr[i] == key){    
-                return i;    
-            }    
-        }    
-        return -1;    
-    }    
-    public static void main(String a[]){    
-        int[] a1= {10,20,30,50,70,90};    
-        int key = 50;    
-        System.out.println(key+" is found at index: "+linearSearch(a1, key));    
-    }    
-} 
+class BinarySearch {
+    1
+    int binarySearch(int arr[], int x)
+    {
+        int l = 0, r = arr.length - 1;
+        while (l <= r) {
+            int m = l + (r - l) / 2;
+ 
+            if (arr[m] == x)
+                return m;
+ 
+         
+            if (arr[m] < x)
+                l = m + 1;
+ 
+            else
+                r = m - 1;
+        }
+ 
+      
+        return -1;
+    }
+ 
+  
+    public static void main(String args[])
+    {
+        BinarySearch ob = new BinarySearch();
+        int arr[] = { 2, 3, 4, 10, 40 };
+        int n = arr.length;
+        int x = 10;
+        int result = ob.binarySearch(arr, x);
+        if (result == -1)
+            System.out.println("Element not present");
+        else
+            System.out.println("Element found at "
+                               + "index " + result);
+    }
+}
